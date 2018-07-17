@@ -12,6 +12,8 @@ from .provider import SteadyHQProvider
 class SteadyHQAdapter(OAuth2Adapter):
     provider_id = SteadyHQProvider.id
 #?response_type=code&client_id=CLIENT_ID&redirect_uri=REDIRECT_URI&scope=read&state=RANDOM_STRING
+
+#https://steadyhq.com/de/oauth/authorize?client_id=XXX&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Faccounts%2Fsteadyhq%2Flogin%2Fcallback%2F&scope=r_emailaddress&response_type=code&state=RWBJi6sADs2u
     access_token_url = 'https://steadyhq.com/api/v1/oauth/token'
     authorize_url = 'https://steadyhq.com/oauth/authorize'
     profile_url = 'https://steadyhq.com/api/v1/users/me'

@@ -57,7 +57,7 @@ class SteadyHQProvider(OAuth2Provider):
     def get_default_scope(self):
         scope = []
         if app_settings.QUERY_EMAIL:
-            scope.append('r_emailaddress')
+            scope.append('read')
         return scope
 
     def extract_common_fields(self, data):
